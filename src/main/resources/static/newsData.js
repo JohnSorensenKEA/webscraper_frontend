@@ -55,7 +55,6 @@ function addTable(data){
 }
 
 function addRow(data, table) {
-  console.log(data, table, "row");
   let rowCount = table.rows.length;
   let row = table.insertRow(rowCount);
 
