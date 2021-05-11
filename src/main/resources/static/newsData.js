@@ -5,7 +5,7 @@ button.onclick = function(){
   getFetch()
 }
 
-const postUrl = "http://3.238.97.159:9090//request/new";
+const postUrl = "http://3.238.97.159:9090/request/new";
 const postRequestOption = {
   headers: {
     "Content-type": 'application/json'
