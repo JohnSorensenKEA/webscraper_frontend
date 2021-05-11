@@ -1,7 +1,7 @@
 // const input = document.getElementById("parInput");
 const button = document.getElementById("inputBtn");
 button.onclick = function(){
-  postFetch()
+  //postFetch()
   getFetch()
 }
 
