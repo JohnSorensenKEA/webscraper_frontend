@@ -37,13 +37,25 @@ fetch(getUrl, getRequestOption)
 }
 
 function gotData(data){
-  console.log(data, "data");
-  data.forEach(addRow);
+  data.forEach(d => addTable(d));
 }
 
-function addRow(data) {
-  console.log(data, "row");
-  const table = document.querySelector(".newsDataTable");
+function addTable(data){
+  let tableHolder = document.getElementById("table-holder");
+
+  let p = document.createElement("p");
+  p.innerHTML = data.id + " | " + data.link + " | " + data.parameter + " | " + data.timestamp;
+  tableHolder.appendChild(p);
+
+  let table = document.createElement("table");
+  table.className = "table newsDataTable";
+  tableHolder.appendChild(table);
+
+  data.data.forEach(d => addRow(d, table));
+}
+
+function addRow(data, table) {
+  console.log(data, table, "row");
   let rowCount = table.rows.length;
   let row = table.insertRow(rowCount);
 
