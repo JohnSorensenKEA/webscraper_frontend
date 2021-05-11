@@ -37,10 +37,12 @@ fetch(getUrl, getRequestOption)
 }
 
 function gotData(data){
+  console.log(data, "data");
   data.forEach(addRow);
 }
 
 function addRow(data) {
+  console.log(data, "row");
   const table = document.querySelector(".newsDataTable");
   let rowCount = table.rows.length;
   let row = table.insertRow(rowCount);
