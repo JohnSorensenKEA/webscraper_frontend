@@ -5,7 +5,7 @@ button.onclick = function(){
   getFetch()
 }
 
-const postUrl = "http://localhost:8080/request/new";
+const postUrl = "http://3.238.97.159:9090//request/new";
 const postRequestOption = {
   headers: {
     "Content-type": 'application/json'
@@ -21,7 +21,7 @@ function postFetch() {
     .then(response => response.json())
 
 }
-const getUrl = "http://localhost:8080/request/all";
+const getUrl = "http://3.238.97.159:9090/request/all";
 const getRequestOption = {
   headers: {
     "Content-type": 'application/json'
